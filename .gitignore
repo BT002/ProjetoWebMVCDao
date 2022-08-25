@@ -1,6 +1,7 @@
  # eclipse
 **/bin/
 **/CVS/
+.gitignore
 *.settings
 .classpath
 .factorypath
