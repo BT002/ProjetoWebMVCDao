@@ -1,0 +1,20 @@
+ # eclipse
+**/bin/
+**/CVS/
+*.settings
+.classpath
+.factorypath
+.project
+
+# class
+*.class
+
+# maven
+**/target/
+*.versionsBackup
+
+# artefatos
+*.ear
+*.jar
+*.war
+MANIFEST.MF
