@@ -12,8 +12,7 @@ import dao.AlunoDAO;
 import dao.AlunoDAOImplMysql;
 import model.Aluno;
 
-
-@WebServlet(description = "Salvar dados aluno", urlPatterns = { "/AlunoServlet"})
+@WebServlet(description = "AlunoServlet", urlPatterns = { "/AlunoServlet" })
 public class AlunoServlet extends HttpServlet {
    private static final long serialVersionUID = 1L;
    private AlunoDAO alunoDAO;
@@ -26,7 +25,6 @@ public class AlunoServlet extends HttpServlet {
 
    @Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		super.doPost(req, resp);
 	}
    
@@ -62,7 +60,7 @@ public class AlunoServlet extends HttpServlet {
 		PrintWriter printWriter = response.getWriter();
 		printWriter.print("<html>");
 		printWriter.print("<body>");
-		printWriter.print("<a href=\"/aluno\">Aluno salvo com sucesso! Link para voltar </a>");
+		printWriter.print("<a href=\"alunos.jsp\">Aluno salvo com sucesso! Link para voltar </a>");
 		printWriter.print("</body>");
 		printWriter.print("</html>");
 		printWriter.close();
@@ -128,7 +126,7 @@ public class AlunoServlet extends HttpServlet {
 	    	
 	    	Aluno aluno = new Aluno(ra, nome, telefone, endereco, Date.valueOf(data_nascimento));
 	    	alunoDAO.atualizarAluno(aluno);
-			response.sendRedirect("aluno");
+			response.sendRedirect("alunos.jsp");
 		
 		} catch (IOException e) {
 			e.printStackTrace();

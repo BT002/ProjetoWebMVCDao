@@ -164,9 +164,9 @@ ALTER TABLE `professores`
 -- Constraints for table `alunos_cursos_professores`
 --
 ALTER TABLE `alunos_cursos_professores`
-  ADD CONSTRAINT `FK_alunos_cursos_professores_1` FOREIGN KEY (`fk_alunos_ra`) REFERENCES `alunos` (`ra`) ON DELETE NO ACTION,
-  ADD CONSTRAINT `FK_alunos_cursos_professores_2` FOREIGN KEY (`fk_cursos_cod_curso`) REFERENCES `cursos` (`cod_curso`) ON DELETE NO ACTION,
-  ADD CONSTRAINT `FK_alunos_cursos_professores_3` FOREIGN KEY (`fk_professores_cpf`) REFERENCES `professores` (`cpf`) ON DELETE NO ACTION;
+  ADD CONSTRAINT `FK_alunos_cursos_professores_1` FOREIGN KEY (`fk_alunos_ra`) REFERENCES `alunos` (`ra`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_alunos_cursos_professores_2` FOREIGN KEY (`fk_cursos_cod_curso`) REFERENCES `cursos` (`cod_curso`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_alunos_cursos_professores_3` FOREIGN KEY (`fk_professores_cpf`) REFERENCES `professores` (`cpf`) ON DELETE CASCADE;
 COMMIT;
 
 

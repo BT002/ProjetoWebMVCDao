@@ -26,7 +26,7 @@
 	<h3>Lista de Alunos</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/new"> Cadastrar novo aluno </a>
+	<a href="<%=request.getContextPath()%>/cadastrar_novo_aluno"> Cadastrar novo aluno </a>
 	<br>
 	<table border="1">
 		<thead>
@@ -51,8 +51,8 @@
 				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getTelefone()%></td>
 				<td><%=aluno.getData_nascimento()%></td>
-				<td><a href="AlunoServlet/editando_dados_aluno?ra=<%=aluno.getRa()%>">Editar</a></td>
-				<td><a href="AlunoServlet/delete_aluno?ra=<%=aluno.getRa()%>">Deletar</a></td>
+				<td><a href="/AlunoServlet/editando_dados_aluno?ra=<%=aluno.getRa()%>">Editar</a></td>
+				<td><a href="/AlunoServlet/delete_aluno?ra=<%=aluno.getRa()%>">Deletar</a></td>
 			</tr>
 			<%
 				}

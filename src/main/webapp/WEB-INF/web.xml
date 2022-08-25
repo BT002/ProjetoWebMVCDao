@@ -9,4 +9,30 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+
+<!-- 
+    <servlet>
+        <servlet-name>Principal</servlet-name>
+        <servlet-class>servlets.Principal</servlet-class>
+    </servlet>
+	<servlet-mapping>
+		<servlet-name>Principal</servlet-name>
+		<url-pattern>/Principal</url-pattern>
+	</servlet-mapping>
+ 
+
+	
+	<servlet>
+		<servlet>
+		<servlet-name>AlunoServlet</servlet-name>
+		<servlet-class>servlets.AlunoServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AlunoServlet</servlet-name>
+		<url-pattern>AlunoServlet</url-pattern>
+	</servlet-mapping>
+
+ -->
+
 </web-app>
