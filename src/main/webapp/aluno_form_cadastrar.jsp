@@ -9,31 +9,29 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Editar aluno</title>
+	<title>Cadastrar Aluno</title>
 </head>
-
 
 <body>
 
-	<h2>Editando dados do aluno</h2>
+	<h2>Cadastrando novo Aluno</h2>
 	
-	<jsp:useBean id="aluno" class="model.AlunosBean" scope="request" />
-
-	<form action="/update_aluno">
-	  RA: 
-	  <input type="text" name="ra" value="<%=aluno.getAlunoEdicao().getRa() %>"><p>
-	  Nome: 
-	  <input type="text" name="nome" value="<%=aluno.getAlunoEdicao().getRa() %>"><p>
-	  Endereco: 
-	  <input type="text" name="endereco" value="<%=aluno.getAlunoEdicao().getRa() %>"><p>
-	  Telefone: 
-	  <input type="text" name="telefone" value="<%=aluno.getAlunoEdicao().getRa() %>"><p>
-	  Data nascimento: 
-	  <input type="text" name="data_nascimento" value="<%=aluno.getAlunoEdicao().getRa() %>"><p>
-	  
-	  <input type="submit" value="Salvar alterações">
-	  <input type="button" value="Cancelar">
-	</form> 
+		<form method="GET" action="AlunoServlet" name="form1">
+		  <input type="hidden" name="acao" value="insert_aluno">
+		  RA: 
+		  <input type="text" name="ra"><p>
+		  Nome: 
+		  <input type="text" name="nome"><p>
+		  Endereco: 
+		  <input type="text" name="endereco"><p>
+		  Telefone: 
+		  <input type="text" name="telefone"><p>
+		  Data nascimento: 
+		  <input type="text" name="data_nascimento"><p>
+		  
+		  <input type="submit" value="Salvar alterações">
+		  <input type="button" value="Cancelar">
+		</form> 
 
 </body>
 </html>
