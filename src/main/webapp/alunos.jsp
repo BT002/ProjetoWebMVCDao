@@ -50,8 +50,8 @@
 			<tr>
 				<td><%=aluno.getRa()%></td>
 				<td><%=aluno.getNome()%></td>
-				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getTelefone()%></td>
+				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getData_nascimento()%></td>
 				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a></td>
 				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%>">Deletar</a></td>
