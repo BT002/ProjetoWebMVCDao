@@ -118,7 +118,7 @@ public class ProfessorDAOImplMysql implements ProfessorDAO{
 	            statement.setString(2, professor.getNome());
 	            statement.setString(3, professor.getTelefone());
 	            statement.setString(4, professor.getConta_bancaria());
-	            statement.setString(6, professor.getCpf());  // WHERE cpf=?
+	            statement.setString(5, professor.getCpf());  // WHERE cpf=?
 	            statement.executeUpdate();
 	        } catch (SQLException e) {
 				e.printStackTrace();
