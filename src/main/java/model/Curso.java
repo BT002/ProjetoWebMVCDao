@@ -2,7 +2,7 @@ package model;
 
 import java.sql.Date;
 
-public class Cursos {
+public class Curso {
 
 	private int cod_curso;
 	private String nome;
@@ -17,7 +17,7 @@ public class Cursos {
 				+ ", data_inicio=" + data_inicio + ", data_fim=" + data_fim + "]";
 	}
 
-	public Cursos(int cod_curso, String nome, String descricao, double valor, Date data_inicio, Date data_fim) {
+	public Curso(int cod_curso, String nome, String descricao, double valor, Date data_inicio, Date data_fim) {
 		super();
 		this.cod_curso = cod_curso;
 		this.nome = nome;
@@ -27,7 +27,7 @@ public class Cursos {
 		this.data_fim = data_fim;
 	}
 
-	public Cursos() {
+	public Curso() {
 		super();
 	}
 
