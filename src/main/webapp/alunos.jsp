@@ -34,8 +34,8 @@
 			<tr>
 				<th>RA</th>
 				<th>Nome</th>
-				<th>Telefone</th>
 				<th>Endereco</th>
+				<th>Telefone</th>
 				<th>Data nascimento</th>
 				<th colspan="2">Ações</th>
 			</tr>
