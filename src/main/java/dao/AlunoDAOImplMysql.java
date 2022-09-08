@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 import model.Aluno;
 
@@ -42,7 +41,8 @@ public class AlunoDAOImplMysql implements AlunoDAO{
 	    public void criarAluno(Aluno aluno) {
 	        
 	    	System.out.println(INSERT_USERS_SQL);
-	        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+	        try (Connection connection = getConnection(); 
+	        		PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 	        	// (ra, nome, telefone, endereco, data_nascimento)
 	        	preparedStatement.setString(1, aluno.getRa());
 	        	preparedStatement.setString(2, aluno.getNome());
