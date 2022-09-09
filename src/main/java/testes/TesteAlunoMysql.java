@@ -3,14 +3,14 @@ package testes;
 import java.sql.Date;
 
 import dao.AlunoDAO;
-import dao.AlunoDAOImplMysql;
+import dao.CursoDAOImplMysql;
 import model.Aluno;
 
 public class TesteAlunoMysql {
 
     public static void main(String[] args) {
 
-        AlunoDAO alunoDAO = new AlunoDAOImplMysql();
+        AlunoDAO alunoDAO = new CursoDAOImplMysql();
         
         // Cadastrando um aluno
         Aluno a1 = new Aluno("777", "Mira Arriba", "081 123", "Hasta La Vista", Date.valueOf("2002-02-02"));

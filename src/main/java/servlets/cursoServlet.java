@@ -11,8 +11,8 @@ import dao.AlunoDAO;
 import dao.CursoDAOImplMysql;
 import model.Aluno;
 
-@WebServlet(description = "AlunoServlet", urlPatterns = { "/ProfessorServlet" })
-public class ProfessorServlet extends HttpServlet {
+@WebServlet(description = "AlunoServlet", urlPatterns = { "/AlunoServlet" })
+public class cursoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private AlunoDAO alunoDAO;
 	private static String CADASTRAR_ALUNOS = "alunos.jsp";
