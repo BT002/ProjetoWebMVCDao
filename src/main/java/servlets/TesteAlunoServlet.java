@@ -11,14 +11,14 @@ import dao.AlunoDAO;
 import dao.AlunoDAOImplMysql;
 import model.Aluno;
 
-@WebServlet(description = "AlunoServlet", urlPatterns = { "/AlunoServlet" })
-public class AlunoServlet extends HttpServlet {
+@WebServlet(description = "AlunoServlet", urlPatterns = { "/TesteAlunoServlet" })
+public class TesteAlunoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private AlunoDAO alunoDAO;
-	private static final String CADASTRAR_ALUNOS = "aluno_form_cadastrar.jsp";
-	private static final String LISTAR_ALUNOS = "alunos.jsp";
-	private static final String ATUALIZAR_ALUNOS = "aluno_form_editar.jsp";
-	private static final String DELETAR_ALUNOS = "alunos.jsp";
+	private static String CADASTRAR_ALUNOS = "alunos.jsp";
+	private static String LISTAR_ALUNOS = "alunos.jsp";
+	private static String ATUALIZAR_ALUNOS = "alunos.jsp";
+	private static String DELETAR_ALUNOS = "alunos.jsp";
 
 	// Inicializando o servlet
 	public void init() throws ServletException {
@@ -32,11 +32,18 @@ public class AlunoServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
+		String forward = "";
+		String opcao = request.getParameter("opcao");
+		
 		RequestDispatcher dispatcher = null;
 		String ra, nome, telefone, endereco, data_nascimento = "";
-
+	
 		if (acao == null) {
 			acao = "";
+		}
+		
+		if (opcao == null) {
+			opcao = "nome_aluno";
 		}
 
 		switch (acao) {
@@ -61,7 +68,7 @@ public class AlunoServlet extends HttpServlet {
 
 			Aluno aluno1 = new Aluno(ra, nome, telefone, endereco, Date.valueOf(data_nascimento));
 			alunoDAO.criarAluno(aluno1);
-
+			
 			request.setAttribute("alunos_todos", alunoDAO.getTodosAlunos());
 			dispatcher = request.getRequestDispatcher("alunos.jsp");
 			dispatcher.forward(request, response);
@@ -80,7 +87,7 @@ public class AlunoServlet extends HttpServlet {
 			request.setAttribute("alunos_todos", alunoDAO.getTodosAlunos());
 			dispatcher = request.getRequestDispatcher("alunos.jsp");
 			dispatcher.forward(request, response);
-
+			
 			break;
 		case "deletar_aluno": // D - Delete
 			ra = request.getParameter("ra");
@@ -98,11 +105,22 @@ public class AlunoServlet extends HttpServlet {
 
 			break;
 		}
+		
+		switch(opcao) {
+		case "nome_aluno":
+			nome = request.getParameter("nome");
+			dispatcher = request.getRequestDispatcher("headerTeste.jsp");
+			dispatcher.forward(request, response);
+			break;
+		case "endereco_aluno":
+			endereco = request.getParameter("endereco");
+			dispatcher = request.getRequestDispatcher("headerTeste.jsp");
+			dispatcher.forward(request, response);
+			break;
+			}
 	}
 
 	public void destroy() {
-		
-		
 
 	}
 }

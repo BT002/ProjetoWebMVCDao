@@ -93,19 +93,19 @@ public class AlunoDAOImplMysql implements AlunoDAO{
 	        try (Connection connection = getConnection();
 
 	            // Passo 2: Criando um caminho usando o objeto conexão
+	        	//PreparedStatement - é o caminho, após a conexão com o banco, para trafegar os dados
 	            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
-	            System.out.println(preparedStatement);
 	            // Passo 3: executar a consulta ou atualização/update
 	            ResultSet rs = preparedStatement.executeQuery();
 
 	            // Passo 4: Processar o objeto ResultSet criando alunos e adicionando no ArrayList
 	            while (rs.next()) {
-	                String ra = rs.getString("ra");
-	                String nome = rs.getString("nome");
+	                String r = rs.getString("ra");
+	                String n = rs.getString("nome");
 	                String telefone = rs.getString("telefone");
 	                String endereco = rs.getString("endereco");
 	                Date data_nascimento = rs.getDate("data_nascimento");
-	                alunos.add(new Aluno(ra, nome, telefone, endereco, data_nascimento));
+	                alunos.add(new Aluno(r, n, telefone, endereco, data_nascimento));
 	            }
 	        } catch (SQLException e) {
 	            printSQLException(e);
