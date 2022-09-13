@@ -36,7 +36,7 @@
 	  <input type="text" name="data_fim" value="<%=curso.getData_fim() %>"><p>
 	  
 	  <input type="submit" value="Salvar alterações">
-	  <input type="button" value="Cancelar">
+	  <input type="button" value="Cancelar" onClick="history.go(-1)">
 	</form> 
 
 </body>

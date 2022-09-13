@@ -28,7 +28,7 @@
 		  <input type="text" name="conta_bancaria"><p>
 		  
 		  <input type="submit" value="Salvar alterações">
-		  <input type="button" value="Cancelar">
+		  <input type="button" value="Cancelar" onClick="history.go(-1)">
 		</form> 
 
 </body>

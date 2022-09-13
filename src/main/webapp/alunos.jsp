@@ -30,9 +30,9 @@
 
 <body>
 
-<%@ include file="headerTeste.jsp" %>
+<%@ include file="cabecalho.jsp" %>
 
-	<h3>Lista de Alunos</h3>
+	<br><h3>Lista de Alunos</h3>
 	<hr>
 
 	<a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
