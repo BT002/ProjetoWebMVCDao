@@ -42,7 +42,8 @@ public class AlunoDAOImplMysql implements AlunoDAO{
 	    public void criarAluno(Aluno aluno) {
 	        
 	    	System.out.println(INSERT_USERS_SQL);
-	        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+	        try (Connection connection = getConnection();
+	        		PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 	        	// (ra, nome, telefone, endereco, data_nascimento)
 	        	preparedStatement.setString(1, aluno.getRa());
 	        	preparedStatement.setString(2, aluno.getNome());
@@ -116,7 +117,8 @@ public class AlunoDAOImplMysql implements AlunoDAO{
 	    // Update do CRUD
 	    @Override
 	    public void atualizarAluno(Aluno aluno) {
-	        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
+	        try (Connection connection = getConnection(); 
+	        		PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
 	            statement.setString(1, aluno.getRa());
 	            statement.setString(2, aluno.getNome());
 	            statement.setString(3, aluno.getTelefone());
