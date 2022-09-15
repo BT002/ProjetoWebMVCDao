@@ -21,10 +21,18 @@
 		}
 	</style>
 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
-	<h3>Lista de Alunos</h3>
+
+<%@ include file="cabecalho.jsp" %>
+
+	<br><h3>Lista de Alunos</h3>
 	<hr>
 
 	<a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
@@ -50,8 +58,8 @@
 			<tr>
 				<td><%=aluno.getRa()%></td>
 				<td><%=aluno.getNome()%></td>
-				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getTelefone()%></td>
+				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getData_nascimento()%></td>
 				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a></td>
 				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%>">Deletar</a></td>
@@ -61,6 +69,8 @@
 			%>
 		</tbody>
 	</table>
+
+<%@ include file="rodape.jsp" %>
 
 </body>
 </html>

@@ -15,10 +15,10 @@ import model.Aluno;
 public class AlunoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private AlunoDAO alunoDAO;
-	private static String CADASTRAR_ALUNOS = "alunos.jsp";
-	private static String LISTAR_ALUNOS = "alunos.jsp";
-	private static String ATUALIZAR_ALUNOS = "alunos.jsp";
-	private static String DELETAR_ALUNOS = "alunos.jsp";
+	private static final String CADASTRAR_ALUNOS = "aluno_form_cadastrar.jsp";
+	private static final String LISTAR_ALUNOS = "alunos.jsp";
+	private static final String ATUALIZAR_ALUNOS = "aluno_form_editar.jsp";
+	private static final String DELETAR_ALUNOS = "alunos.jsp";
 
 	// Inicializando o servlet
 	public void init() throws ServletException {
@@ -32,7 +32,6 @@ public class AlunoServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String acao = request.getParameter("acao");
-		String forward = "";
 		RequestDispatcher dispatcher = null;
 		String ra, nome, telefone, endereco, data_nascimento = "";
 
@@ -62,7 +61,7 @@ public class AlunoServlet extends HttpServlet {
 
 			Aluno aluno1 = new Aluno(ra, nome, telefone, endereco, Date.valueOf(data_nascimento));
 			alunoDAO.criarAluno(aluno1);
-			
+
 			request.setAttribute("alunos_todos", alunoDAO.getTodosAlunos());
 			dispatcher = request.getRequestDispatcher("alunos.jsp");
 			dispatcher.forward(request, response);
@@ -81,7 +80,7 @@ public class AlunoServlet extends HttpServlet {
 			request.setAttribute("alunos_todos", alunoDAO.getTodosAlunos());
 			dispatcher = request.getRequestDispatcher("alunos.jsp");
 			dispatcher.forward(request, response);
-			
+
 			break;
 		case "deletar_aluno": // D - Delete
 			ra = request.getParameter("ra");
@@ -102,6 +101,8 @@ public class AlunoServlet extends HttpServlet {
 	}
 
 	public void destroy() {
+		
+		
 
 	}
 }
