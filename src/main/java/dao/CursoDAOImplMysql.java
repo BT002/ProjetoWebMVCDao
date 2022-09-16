@@ -13,7 +13,7 @@ import model.Curso;
 
 public class CursoDAOImplMysql implements CursoDAO{
 
-	    private String url = "jdbc:mysql://localhost:3306/db_bt002?useSSL=false";
+	    private String url = "jdbc:mysql://localhost:3306/bd_aula01092022?useSSL=false";
 	    private String username = "root";
 	    private String password = "";
 
