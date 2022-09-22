@@ -28,19 +28,19 @@
 
 <%@ include file="cabecalho.jsp" %>
 
-	<h3>Lista de Professores</h3>
+	<br><h3>Lista de Professores</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_cadastrar_professor"> Cadastrar novo professor(a) </a>
+	<a class="btn btn-success" href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_cadastrar_professor"> Cadastrar novo professor(a) </a>
 	<br>
-	<table border="1">
+	<table class="table table-hover text-nowrap">
 		<thead>
 			<tr>
 				<th>CPF</th>
 				<th>Nome</th>
 				<th>Telefone</th>
 				<th>Conta Bancária</th>
-				<th colspan="2">Ações</th>
+				<th colspan="2" style="width:5%">Ações</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -55,8 +55,8 @@
 				<td><%=professor.getNome()%></td>
 				<td><%=professor.getTelefone()%></td>
 				<td><%=professor.getConta_bancaria()%></td>
-				<td><a href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_editar_professor&cpf=<%=professor.getCpf()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/ProfessorServlet?acao=deletar_professor&cpf=<%=professor.getCpf()%>">Deletar</a></td>
+				<td><a class="btn btn-warning" href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_editar_professor&cpf=<%=professor.getCpf()%>">Editar</a></td>
+				<td><a class="btn btn-dark" href="<%=request.getContextPath()%>/ProfessorServlet?acao=deletar_professor&cpf=<%=professor.getCpf()%>">Deletar</a></td>
 			</tr>
 			<%
 				}

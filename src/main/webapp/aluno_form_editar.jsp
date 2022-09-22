@@ -26,12 +26,12 @@
 	  <input type="text" name="ra" value="<%=aluno.getRa() %>"><p>
 	  Nome: 
 	  <input type="text" name="nome" value="<%=aluno.getNome() %>"><p>
-	  Endereco: 
+	  Endereço: 
 	  <input type="text" name="endereco" value="<%=aluno.getEndereco() %>"><p>
 	  Telefone: 
 	  <input type="text" name="telefone" value="<%=aluno.getTelefone() %>"><p>
-	  Data nascimento: 
-	  <input type="text" name="data_nascimento" value="<%=aluno.getData_nascimento() %>"><p>
+	  Data de Nascimento: 
+	  <input type="date" name="data_nascimento" value="<%=aluno.getData_nascimento() %>"><p>
 	  
 	  <input type="submit" value="Salvar alterações">
 	  <input type="button" value="Cancelar" onClick="history.go(-1)">
