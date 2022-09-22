@@ -31,9 +31,9 @@
 	  Valor: 
 	  <input type="text" name="valor" value="<%=curso.getValor() %>"><p>
 	  Data de início: 
-	  <input type="text" name="data_inicio" value="<%=curso.getData_inicio() %>"><p>
+	  <input type="date" name="data_inicio" value="<%=curso.getData_inicio() %>"><p>
 	  Data de fim: 
-	  <input type="text" name="data_fim" value="<%=curso.getData_fim() %>"><p>
+	  <input type="date" name="data_fim" value="<%=curso.getData_fim() %>"><p>
 	  
 	  <input type="submit" value="Salvar alterações">
 	  <input type="button" value="Cancelar" onClick="history.go(-1)">

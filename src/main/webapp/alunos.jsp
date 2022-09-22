@@ -33,23 +33,23 @@
 <%@ include file="cabecalho.jsp" %>
 
 	<br><h3>Lista de Alunos</h3>
-	<hr>
+	<hr> 
 
-	<a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
+	<a class="btn btn-success" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
 	<br>
-	<table border="1">
+	
+ 	<table class="table table-hover text-nowrap ">
 		<thead>
 			<tr>
 				<th>RA</th>
 				<th>Nome</th>
 				<th>Telefone</th>
-				<th>Endereco</th>
-				<th>Data nascimento</th>
-				<th colspan="2">Ações</th>
+				<th>Endereço</th>
+				<th>Data de nascimento</th>
+				<th colspan="2" style="width:5%">Ações</th>
 			</tr>
 		</thead>
 		<tbody>
-		
 			
 			<%
 				List<Aluno> alunos = (List) request.getAttribute("alunos_todos");
@@ -61,8 +61,8 @@
 				<td><%=aluno.getTelefone()%></td>
 				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getData_nascimento()%></td>
-				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%>">Deletar</a></td>
+				<td><a class="btn btn-warning" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a></td>
+				<td><a class="btn btn-dark" href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%> ">Deletar</a></td>
 			</tr>
 			<%
 				}

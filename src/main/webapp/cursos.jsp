@@ -30,12 +30,12 @@
 
 <%@ include file="cabecalho.jsp" %>
 
-	<h3>Lista de Cursos</h3>
+	<br><h3>Lista de Cursos</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_cadastrar_curso"> Cadastrar novo curso </a>
+	<a class="btn btn-success" href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_cadastrar_curso"> Cadastrar novo curso </a>
 	<br>
-	<table border="1">
+	<table class="table table-hover text-nowrap">
 		<thead>
 			<tr>
 				<th>Código do Curso</th>
@@ -44,7 +44,7 @@
 				<th>Valor</th>
 				<th>Data de início</th>
 				<th>Data de fim</th>
-				<th colspan="2">Ações</th>
+				<th colspan="2" style="width:5%">Ações</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -55,14 +55,14 @@
 				for (Curso curso : cursos) {
 			%>
 			<tr>
-				<td><%=curso.getCod_curso()%></td>
+				<td> <div style="text-align:center"> <%=curso.getCod_curso()%> </div></td>
 				<td><%=curso.getNome()%></td>
 				<td><%=curso.getDescricao()%></td>
 				<td><%=curso.getValor()%></td>
 				<td><%=curso.getData_inicio()%></td>
 				<td><%=curso.getData_fim()%></td>
-				<td><a href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_editar_curso&cod_curso=<%=curso.getCod_curso()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/CursoServlet?acao=deletar_curso&cod_curso=<%=curso.getCod_curso()%>">Deletar</a></td>
+				<td><a class="btn btn-warning" href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_editar_curso&cod_curso=<%=curso.getCod_curso()%>">Editar</a></td>
+				<td><a class="btn btn-dark" href="<%=request.getContextPath()%>/CursoServlet?acao=deletar_curso&cod_curso=<%=curso.getCod_curso()%>">Deletar</a></td>
 			</tr>
 			<%
 				}
