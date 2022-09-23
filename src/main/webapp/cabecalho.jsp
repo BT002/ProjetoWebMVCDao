@@ -10,16 +10,19 @@
   
     <ul class="navbar-nav mr-auto" style=font-size:110%>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/AlunoServlet">Alunos </a>
+      
+      
+      
+        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/AlunoServlet"> <button type="button" class="btn btn-outline-primary">Alunos</button> </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/ProfessorServlet">Professores </a>
+        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/ProfessorServlet"><button type="button" class="btn btn-outline-secondary">Professores</button> </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/CursoServlet">Cursos </a>
+        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/CursoServlet"><button type="button" class="btn btn-outline-danger">Cursos</button></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Turmas em curso </a>
+        <a class="nav-link" href="#"> <button type="button" class="btn btn-outline-warning">Turmas em curso </button></a>
       </li>
      </ul>
   </div>
