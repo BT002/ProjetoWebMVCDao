@@ -35,22 +35,17 @@
 	<br><h3>Lista de Alunos</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
+	<a class="btn btn-primary" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
 	<br>
-	<table border="1">
-		<thead>
+	<table class="table">
 			<tr>
-				<th>RA</th>
-				<th>Nome</th>
-				<th>Telefone</th>
-				<th>Endereco</th>
-				<th>Data nascimento</th>
-				<th colspan="2">Ações</th>
+				<th scope="col">RA</th>
+				<th scope="col">Nome</th>
+				<th scope="col">Telefone</th>
+				<th scope="col">Endereco</th>
+				<th scope="col">Data nascimento</th>
+				<th scope="col">Ações</th>
 			</tr>
-		</thead>
-		<tbody>
-		
-			
 			<%
 				List<Aluno> alunos = (List) request.getAttribute("alunos_todos");
 				for (Aluno aluno : alunos) {
@@ -61,8 +56,10 @@
 				<td><%=aluno.getTelefone()%></td>
 				<td><%=aluno.getEndereco()%></td>
 				<td><%=aluno.getData_nascimento()%></td>
-				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%>">Deletar</a></td>
+				<td>
+				   <a class="btn btn-warning" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_editar_aluno&ra=<%=aluno.getRa()%>">Editar</a>
+				   <a class="btn btn-dark" href="<%=request.getContextPath()%>/AlunoServlet?acao=deletar_aluno&ra=<%=aluno.getRa()%>">Deletar</a>
+				</td>
 			</tr>
 			<%
 				}
@@ -70,7 +67,7 @@
 		</tbody>
 	</table>
 
-<%@ include file="rodape.jsp" %>
+
 
 </body>
 </html>
