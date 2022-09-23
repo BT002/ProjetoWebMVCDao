@@ -31,7 +31,7 @@
 	<h3>Lista de Professores</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_cadastrar_professor"> Cadastrar novo professor(a) </a>
+	<a class="btn btn-success " href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_cadastrar_professor"> Cadastrar novo professor(a) </a>
 	<br>
 	<table border="1">
 		<thead>
@@ -55,9 +55,9 @@
 				<td><%=professor.getNome()%></td>
 				<td><%=professor.getTelefone()%></td>
 				<td><%=professor.getConta_bancaria()%></td>
-				<td><a href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_editar_professor&cpf=<%=professor.getCpf()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/ProfessorServlet?acao=deletar_professor&cpf=<%=professor.getCpf()%>">Deletar</a></td>
-			</tr>
+				<td><a class="btn btn-warning " href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_editar_professor&cpf=<%=professor.getCpf()%>">Editar</a></td>
+				<td><a class="btn btn-primary " href="<%=request.getContextPath()%>/ProfessorServlet?acao=deletar_professor&cpf=<%=professor.getCpf()%>">Deletar</a></td>
+		
 			<%
 				}
 			%>

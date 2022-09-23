@@ -16,10 +16,12 @@
 
 	<h2>Cadastrando novo Aluno</h2>
 	
+	
+	
 		<form method="GET" action="AlunoServlet" name="form1">
-		  <input type="hidden" name="acao" value="insert_aluno">
+		<input type="hidden" name="acao" value="insert_aluno">
 		  RA: 
-		  <input type="text" name="ra"><p>
+		  <input type="text"  name="ra"><p>
 		  Nome: 
 		  <input type="text" name="nome"><p>
 		  Endereco: 

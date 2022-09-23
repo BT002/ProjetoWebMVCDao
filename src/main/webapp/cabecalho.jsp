@@ -8,16 +8,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/AlunoServlet">Alunos </a>
+        <a class="btn btn-outline-primary" href="http://localhost:8080/ProjetoWebMVCDao/AlunoServlet">Alunos </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/ProfessorServlet">Professores </a>
+        <a class="btn btn-outline-primary" href="http://localhost:8080/ProjetoWebMVCDao/ProfessorServlet">Professores </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:8080/ProjetoWebMVCDao/CursoServlet">Cursos </a>
+        <a class="btn btn-outline-primary" href="http://localhost:8080/ProjetoWebMVCDao/CursoServlet">Cursos </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Turmas em curso </a>
+        <a class="btn btn-outline-primary" href="#">Turmas em curso </a>
       </li>
      </ul>
   </div>

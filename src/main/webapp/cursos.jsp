@@ -33,7 +33,7 @@
 	<h3>Lista de Cursos</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_cadastrar_curso"> Cadastrar novo curso </a>
+	<a class="btn btn-success " href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_cadastrar_curso"> Cadastrar novo curso </a>
 	<br>
 	<table border="1">
 		<thead>
@@ -61,8 +61,8 @@
 				<td><%=curso.getValor()%></td>
 				<td><%=curso.getData_inicio()%></td>
 				<td><%=curso.getData_fim()%></td>
-				<td><a href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_editar_curso&cod_curso=<%=curso.getCod_curso()%>">Editar</a></td>
-				<td><a href="<%=request.getContextPath()%>/CursoServlet?acao=deletar_curso&cod_curso=<%=curso.getCod_curso()%>">Deletar</a></td>
+				<td><a class="btn btn-warning " href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_editar_curso&cod_curso=<%=curso.getCod_curso()%>">Editar</a></td>
+				<td><a class="btn btn-primary " href="<%=request.getContextPath()%>/CursoServlet?acao=deletar_curso&cod_curso=<%=curso.getCod_curso()%>">Deletar</a></td>
 			</tr>
 			<%
 				}

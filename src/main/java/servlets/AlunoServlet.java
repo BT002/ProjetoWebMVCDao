@@ -59,6 +59,7 @@ public class AlunoServlet extends HttpServlet {
 			endereco = request.getParameter("endereco");
 			data_nascimento = request.getParameter("data_nascimento");
 
+					
 			Aluno aluno1 = new Aluno(ra, nome, telefone, endereco, Date.valueOf(data_nascimento));
 			alunoDAO.criarAluno(aluno1);
 
