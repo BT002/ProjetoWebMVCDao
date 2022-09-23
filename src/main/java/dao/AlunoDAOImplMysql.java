@@ -13,7 +13,7 @@ import model.Aluno;
 
 public class AlunoDAOImplMysql implements AlunoDAO{
 
-	    private String url = "jdbc:mysql://localhost:3306/db_bt002?useSSL=false";
+	    private String url = "jdbc:mysql://localhost:3306/bt002?useSSL=false";
 	    private String username = "root";
 	    private String password = "";
 

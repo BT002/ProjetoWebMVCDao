@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Alunos</title>
+	<title>Aluno</title>
 	
 	<style type="text/css">
 		table {
@@ -35,7 +35,8 @@
 	<br><h3>Lista de Alunos</h3>
 	<hr>
 
-	<a href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
+	<a class="btn btn-warning" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Cadastrar novo aluno </a>
+	<a class="btn btn-info" href="<%=request.getContextPath()%>/AlunoServlet?acao=exibir_formulario_cadastrar_aluno"> Login aluno </a>
 	<br>
 	<table border="1">
 		<thead>
@@ -50,7 +51,6 @@
 		</thead>
 		<tbody>
 		
-			
 			<%
 				List<Aluno> alunos = (List) request.getAttribute("alunos_todos");
 				for (Aluno aluno : alunos) {
