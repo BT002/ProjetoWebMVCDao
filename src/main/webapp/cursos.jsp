@@ -32,6 +32,7 @@
 
 	<h3>Lista de Cursos</h3>
 	<hr>
+	
 
 	<a href="<%=request.getContextPath()%>/CursoServlet?acao=exibir_formulario_cadastrar_curso"> Cadastrar novo curso </a>
 	<br>

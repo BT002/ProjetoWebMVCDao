@@ -30,6 +30,7 @@
 
 	<h3>Lista de Professores</h3>
 	<hr>
+	
 
 	<a href="<%=request.getContextPath()%>/ProfessorServlet?acao=exibir_formulario_cadastrar_professor"> Cadastrar novo professor(a) </a>
 	<br>
